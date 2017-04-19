@@ -1,0 +1,74 @@
+---
+title: "Scrape DOM Elements"
+output: html_notebook
+---
+
+```{r}
+library(rvest)
+query_list<-c("BOS","CHI","WAS","ATL","TOR","MIL","CLE","IND",
+        "GSW","POR","LAC","UTA","HOU","OKC","SAS","MEM")
+
+update<-list()
+for (i in 1:length(query_list)){
+  url<-paste0("http://www.basketball-reference.com/teams/",query_list[i],"/2017/gamelog/")
+  table<-read_html(url) %>%
+  html_nodes("table")%>%
+  html_table()
+  result<-table[[1]][90:nrow(table[[1]]),]
+  colnames(result)<-table[[1]][89,]
+  update[[i]]<-result
+}
+
+names(update)<-query_list
+
+save(update,file="../data/PerGame_playoff_2017.RData")
+
+````
+
+scrape team full names
+```{r}
+query<-read_html("http://www.basketball-reference.com/playoffs/NBA_2017.html")%>%
+  html_nodes("table") %>%
+  html_table(fill=TRUE)%>%
+  .[[10]]%>%
+  .[1:16,2]
+
+```
+
+
+
+
+
+## Exploring scraping dynamic data frames
+Scrape data from http://stats.nba.com/team/ 
+**References** 
+https://cran.r-project.org/web/packages/RSelenium/vignettes/RSelenium-basics.html
+https://www.r-bloggers.com/scraping-with-selenium/
+http://stackoverflow.com/questions/37563409/rselenium-web-scraping-with-r
+http://ropensci.github.io/RSelenium/articles/RSelenium-basics.html
+
+```{r}
+# install.packages("phamtomjs")
+library(devtools)
+library(rdom)
+
+src<-rdom("http://www.basketball-reference.com/teams/BOS/2017/gamelog/","#tgl_basic_playoffs > tbody") 
+library(XML)
+library(XML2R)
+
+
+url <- 
+"http://stats.nba.com/team/#!/1610612762/traditional/?Season=2016-17&SeasonType=Regular%20Season&Split=opp"
+url<-"http://www.basketball-reference.com/teams/BOS/2017/gamelog/"
+
+
+library(RSelenium)
+pJS <- rsDriver()
+remDr <- remoteDriver(browserName="chrome", port=4444)
+remDr$open(silent=T)
+remDr$navigate(url)
+webElem <- remDr$findElement(using = 'id', value = "ad_bnr_atf_01")
+webElems <- remDr$findElements(using = 'css selector', "h3.r")
+bElem$getElementText()
+```
+
