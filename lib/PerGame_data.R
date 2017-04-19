@@ -9,7 +9,7 @@ data_clean <- function(name, year = "2016") {
 
 
 
-name_vec <- c("CEL", "CHI", "WAS", "ATL", "TOR", "MIL",  "CLE", "IND", 
+name_vec <- c("BOS", "CHI", "WAS", "ATL", "TOR", "MIL",  "CLE", "IND", 
               "GSW", "POR", "LAC", "UTA", "HOU", "OKC", "SAS", "MEM")
 m <- sapply(name_vec, data_clean)
 
@@ -27,7 +27,7 @@ for (i in 1:dim(m)[2]) {
 }
 
 
-name_playoff <- c("CLE", "TOR", "MIA", "ATL", "CEL", "CHO", "IND", "DET", 
+name_playoff <- c("CLE", "TOR", "MIA", "ATL", "BOS", "CHO", "IND", "DET", 
                   "GSW", "SAS", "OKC", "LAC", "POR", "DAL", "MEM", "HOU")
 
 data_clean <- function(name, year = "2016") {
@@ -41,7 +41,7 @@ data_clean <- function(name, year = "2016") {
 m <- sapply(name_playoff, data_clean)
 for (i in 1:dim(m)[2]) {
   x <- as.data.frame(m[, i])
-  write.csv(x, file = paste0("../data/PerGame_playoff_2016/", name_vec[i], "_2016.csv"))
+  write.csv(x, file = paste0("../data/PerGame_playoff_2016/", name_playoff[i], "_2016.csv"))
   
 }
 
