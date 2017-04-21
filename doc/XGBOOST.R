@@ -31,6 +31,8 @@ train_data<-lapply(train_data,clean_data)
 
 ##get historical performace
 ####Get the averge performance
+wt<-0.9^seq(82, 1, by = -1)
+wt<-wt/sum(wt)
 Ave_performace<-lapply(train_data,get_average,weight=rep(1/82,82))
 Ave_performace<-Reduce(rbind,Ave_performace)
 d<-ncol(Ave_performace)
@@ -69,6 +71,7 @@ dim(test_data_festures)
 ##################################################
 ##Modelling:XGBOOST:
 #####################################################
+install.packages('xgboost')
 library(xgboost)
 
 ####Data Preperation:
