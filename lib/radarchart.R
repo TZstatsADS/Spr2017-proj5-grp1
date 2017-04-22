@@ -1,9 +1,3 @@
----
-title: "Untitled"
-output: html_document
----
-
-```{r}
 setwd("~/Desktop/5243 ADS/Spr2017-proj5-grp1-master/data/baseline")
 team<-read.csv("team.csv")[1:30,]
 short<-read.csv("short.csv",header = F)
@@ -18,7 +12,7 @@ newdata<- team[tn,]
 n<-nrow(team)
 d<-ncol(team)
 newdata<-as.data.frame(cbind(newdata$FG.,newdata$X3P.,newdata$TRB,
-               newdata$AST,newdata$STL,newdata$BLK))
+                             newdata$AST,newdata$STL,newdata$BLK))
 average<-apply(newdata,2,mean)
 
 radardata<-matrix(NA,ncol = 6,nrow=16)
@@ -30,19 +24,14 @@ for (i in 1:16){
 radardata<-as.data.frame(radardata)
 max(radardata)
 min(radardata)
-```
 
-```{r}
 library(radarchart)
 labs<-c("FG%","X3P%","TRB","AST","STL","BLK")
 radarfunction<-function(a,b){
   scores<-list(
-  "team1"=as.numeric(radardata[a,1:6]),
-  "team2"=as.numeric(radardata[b,1:6]))
+    "team1"=as.numeric(radardata[a,1:6]),
+    "team2"=as.numeric(radardata[b,1:6]))
   
   chartJSRadar(scores = scores, labs = labs, scaleStartValue=min(radardata[a,],radardata[b,])+0.01,maxScale = max(radardata[a,],radardata[b,])+0.01)
 }
-
-
-```
 
