@@ -1,5 +1,7 @@
 # Project: 
 ### Data folder
 
-The data directory contains data used in the analysis. This is treated as read only; in particular the R/python files are never allowed to write to the files in here. Depending on the project, these might be csv files, a database, and the directory itself may have subdirectories.
-`nba_2016.csv` contains 2015-16 NBA Schedule and Results, scrapped from basketball-reference.com.
+The data directory contains data used in the analysis. 
+
+
+`nba_2016.csv` contains 2015-16 NBA Schedule and Results, scrapped from [Basketball-reference](www.basketball-reference.com.)
