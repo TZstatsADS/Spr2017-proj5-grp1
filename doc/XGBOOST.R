@@ -107,7 +107,7 @@ for (i in 1:length(depth.choice)) {
     crossvalid <- xgb.cv( params = parameters,
                           data = Train.D,
                           nrounds = 100,
-                          verbose = 1,
+                          verbose = 0,
                           maximize = FALSE,
                           nfold = 5,
                           early_stopping_rounds = 8,
