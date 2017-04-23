@@ -4,8 +4,8 @@
 source("../lib/function.R")
 
 ####Specify Path:
-train.path="../data/PerGame_2015/"
-test.path="../data/PerGame_playoff_2016/"
+train.path="../data/PerGame_2016/"
+#test.path="../data/PerGame_playoff_2016/"
 
 tra=list.files(path = train.path, pattern = "*.csv")
 tes=list.files(path = test.path, pattern = "*.csv")
