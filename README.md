@@ -10,8 +10,11 @@ Term: Spring 2017
 	+ Ruxue Peng
 	+ Zixuan Guan
 	+ Yue Jin
-+ Project summary: 
-![playoffs](Paper/images/playoff.jpg)
++ Project summary:
+
+![playoffs](./paper/images/playoff.jpg)
+
+
  NBA 2015-2016 season was unforgettable. The Golden State Warriors 73-9 made
  history. For the playoffs, OKC ended their journey even they got 3-0 over GSW
  at first. Then the same situation happened again to GSW, at the finals, GSW won
