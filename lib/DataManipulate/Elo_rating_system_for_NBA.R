@@ -244,7 +244,7 @@ add_elo <- function(name) {
   ELO_opp <- NA
   
   for (i in 1:nrow(df)) {
-    ELO[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), 3]
+    ELO[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), which(colnames(elo_2016)==name)]
     ELO_opp[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), which(df$Opp[i]==colnames(elo_2016))]
   }
   
@@ -271,7 +271,7 @@ add_elo <- function(name) {
   ELO_opp <- NA
   
   for (i in 1:nrow(df)) {
-    ELO[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), 3]
+    ELO[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), which(colnames(elo_2016)==name)]
     ELO_opp[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), which(df$Opp[i]==colnames(elo_2016))]
   }
   
@@ -313,7 +313,7 @@ add_elo <- function(name) {
   ELO_opp <- NA
   
   for (i in 1:nrow(df)) {
-    ELO[i] <- elo_2017[which(df$Date[i]==elo_2017$Date), 3]
+    ELO[i] <- elo_2017[which(df$Date[i]==elo_2017$Date), which(colnames(elo_2017)==name)]
     ELO_opp[i] <- elo_2017[which(df$Date[i]==elo_2017$Date), which(df$Opp[i]==colnames(elo_2017))]
   }
   

@@ -1,0 +1,43 @@
+\documentclass[11pt]{article} 
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{subcaption}
+\graphicspath{{./images/}}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\setlength{\parskip}{1em}
+
+
+\title{Predictive Modeling on 2017 NBA Playoffs} \author{ Qingyuan, Zhang
+   \and Jihan, Wei \and Ruxue, Peng
+ \and Zixuan, Guan \and Yue, Jin }
+
+\bibliographystyle{siam}
+
+\begin{document}
+
+\maketitle
+
+\pagestyle{plain}
+
+\input{intro}
+
+\input{data}
+
+\input{ELO}
+
+\input{XGboost}
+
+\input{Performance}
+
+\input{ShinyApp}
+
+
+\newpage
+\bibliography{main}
+%change report to main!!!!!!!!!!
+
+\end{document}
