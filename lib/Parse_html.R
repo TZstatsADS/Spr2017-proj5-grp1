@@ -7,3 +7,11 @@ Parse_html = function(link){
   Table = table_list[[1]] # only need the first table
   return(Table)
 }
+
+Parse_html_hometeam = function(link){
+  table_list <- read_html(link) %>% # load the page
+    html_nodes("table") %>% # isloate the text
+    html_table(header = T)
+  Table = table_list[[3]] # only need the first table
+  return(Table)
+}
