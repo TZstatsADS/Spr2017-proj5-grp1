@@ -1,5 +1,7 @@
 # Project: 
 ### Code lib Folder
 
-The lib directory contains various files with function definitions (but only function definitions - no code that actually runs).
+For feature construction of each team's player, please refer to Player_Feature_Construction.R, functions used within this .R file can be found in this folder, too.  
+To download this data directly, please go to data/EFFadded folder.  
+
 
