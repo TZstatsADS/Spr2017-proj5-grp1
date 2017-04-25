@@ -25,6 +25,7 @@ for (i in 1:n){
 train_data<-lapply(train_data,clean_data)
 lapply(train_data,dim)
 
+
 ##Convert trining data to matrix:
 train_data<-Reduce(rbind,train_data)
 #dim(train_data)
@@ -74,10 +75,9 @@ Ave_performace<-Reduce(rbind,Ave_performace)
 d<-ncol(Ave_performace)
 Ave_performace<-Ave_performace[,-c(d-1,d)]
 d<-ncol(Ave_performace)
-Ave_performace[,d]<-ELO
 ave<-substr(ave, start=1, stop=3)
 rownames(Ave_performace)<-ave
-
+dim(Ave_performace)
 
 ####################################################
 #Construct the test matrix
@@ -129,13 +129,12 @@ WininngProb1<-WininngProb
 WininngProb2<-WininngProb
 WininngProb3<-WininngProb
 WininngProb4<-WininngProb
-pre1<-simulation_layer(teams,WininngProb=WininngProb1,iter=1000)
-pre2<-simulation_layer(pre1,WininngProb=WininngProb2,iter=1000)
-pre3<-simulation_layer(pre2,WininngProb=WininngProb3,iter=1000)
+pre1<-simulation_layer(teams,WininngProb=WininngProb1,iter=5000)
+pre2<-simulation_layer(pre1,WininngProb=WininngProb2,iter=5000)
+pre3<-simulation_layer(pre2,WininngProb=WininngProb3,iter=5000)
 
 #for the final round:
-pre4<- simulation_layer(pre3,WininngProb=WininngProb3,iter=1000)
-
+pre4<- simulation_layer(pre3,WininngProb=WininngProb3,iter=5000)
 pre1
 pre2
 pre3
