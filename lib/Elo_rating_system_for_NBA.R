@@ -210,7 +210,10 @@ elo_2017 <- allgames
 write.csv(elo_2016, file = "../data/elo_2016.csv")
 write.csv(elo_2017, file = "../data/elo_2017.csv")
 
-
+#Pr(A) = 1 / (10^(-ELODIFF/400) + 1)
+# Based on most rescent elo points, prob that MIL wins over TOR is:
+fin <- elo_2017[nrow(elo_2017),]
+1/(10^(-(fin$`Toronto Raptors`-fin$`Milwaukee Bucks`)/400)+1)
 
   
   
