@@ -20,5 +20,5 @@ The data directory contains data used in the analysis.
 
 `EFFadded` contains 2015-2016 NBA regular season,playoffs and 2016-2017 NBA regular season game log for those 16 teams that enters that year's playoffs. (with added data of each team's EFF score at each game).  
 
-`FinalData` folder contains game logs + EFF + ELO for 16 teams who entered 2017 playoffs, plus game logs + EFF + ELO for 16 teams who entered 2016 playoffs.
+`FinalData` folder contains two most recent regular season's game logs + EFF + ELO for 16 teams who entered 2017 playoffs, plus 2016 playoff game logs + EFF + ELO for 16 teams who entered 2016 playoffs.
 
