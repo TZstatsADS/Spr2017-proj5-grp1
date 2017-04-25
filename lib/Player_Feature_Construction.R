@@ -21,11 +21,7 @@ EFFdic = loadEFF()
 ## The name is the team that plays at home.
 # read in game data
 File_list = list.files("../data/PerGame_2015")
-Data = list()
-for(i in 1:length(File_list)){
-  Data[[i]] = read.csv(paste0("../data/PerGame_2015/",File_list)[i],as.is = T)
-}
-
+Data = alply(File_list,1,function(path) read.csv(paste0("../data/PerGame_2015/",path),as.is = T))
 links = Make_link(Datatable = Data[[1]],File_list = File_list)
 ##############################################################
 
