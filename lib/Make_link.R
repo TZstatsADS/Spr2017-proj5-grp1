@@ -5,6 +5,10 @@
 # output: link for each game
 
 Make_link = function(Datatable,order,File_list){
+  ## The link follows pattern: /date + 0 + nameabbreviation +.html
+  ## eg. http://www.basketball-reference.com/boxscores/201510290NYK.html
+  ## The name is the team that plays at home.
+  
   Date = Datatable$Date
   Date_split = strsplit(Date,split = "/")
   # cleaning Date
