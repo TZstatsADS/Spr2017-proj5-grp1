@@ -3,7 +3,7 @@
 Term: Spring 2017
 
 + Team 1
-+ Projec title: Who will be the champion
++ Projec title: The Champion goes to...
 + Team members
 	+ Qingyuan Zhang
 	+ Jihan Wei
@@ -11,18 +11,16 @@ Term: Spring 2017
 	+ Zixuan Guan
 	+ Yue Jin
 + Project summary: 
+
+ NBA 2015-2016 season was unforgettable. The Golden State Warriors 73-9 made
+ history. For the playoffs, OKC ended their journey even they got 3-0 over GSW
+ at first. Then the same situation happened again to GSW, at the finals, GSW won
+ over CLE by 3-0, but they dramatically lose the following 4 games. 
+
+ This is why NBA is so enchanting. You can never predict what the game would be
+ like till the last minutes.
+
+ Then why this project? Because we want to train our machine on helping us
+ make predictions without subjective opinions. 
 	
-**Contribution statement**: ([default](doc/a_note_on_contributions.md)) All team members contributed equally in all stages of this project. All team members approve our work presented in this GitHub repository including this contributions statement. 
 
-Following [suggestions](http://nicercode.github.io/blog/2013-04-05-projects/) by [RICH FITZJOHN](http://nicercode.github.io/about/#Team) (@richfitz). This folder is orgarnized as follows.
-
-```
-proj/
-├── lib/
-├── data/
-├── doc/
-├── figs/
-└── output/
-```
-
-Please see each subfolder for a README file.
