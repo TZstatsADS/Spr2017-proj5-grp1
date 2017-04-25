@@ -20,11 +20,10 @@ EFFdic = loadEFF()
 ## eg. http://www.basketball-reference.com/boxscores/201510290NYK.html
 ## The name is the team that plays at home.
 # read in game data
-setwd("../data/PerGame_2015")
-File_list = list.files()
+File_list = list.files("../data/PerGame_2015")
 Data = list()
 for(i in 1:length(File_list)){
-  Data[[i]] = read.csv(File_list[i],as.is = T)
+  Data[[i]] = read.csv(paste0("../data/PerGame_2015/",File_list)[i],as.is = T)
 }
 
 links = Make_link(Datatable = Data[[1]],File_list = File_list)
