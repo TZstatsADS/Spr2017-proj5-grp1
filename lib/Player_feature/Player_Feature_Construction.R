@@ -1,13 +1,13 @@
 # Player Feature Construction #
 library(plyr)
 library(rvest)
-source("../lib/Parse_html.R")
-source("../lib/ExtractMP.R")
-source("../lib/core_player.R")
-source("../lib/query_EFF.R")
-source("../lib/loadEFF.R")
-source("../lib/Make_link.R")
-source("../lib/Make_link_playoffs.R")
+source("Parse_html.R")
+source("ExtractMP.R")
+source("core_player.R")
+source("query_EFF.R")
+source("loadEFF.R")
+source("Make_link.R")
+source("Make_link_playoffs.R")
 
 
 # Load EFF data, data source: http://www.hoopsstats.com/basketball/fantasy/nba/playerstats/16/1/eff/7-1
@@ -88,5 +88,5 @@ firsthalf$EFF = EFF
 secondhalf$EFF_opp = Opp_EFF
 newdata = data.frame(firsthalf,secondhalf)
 
-Filenames = paste0("../data/EFFadded_data/",substr(File_list,1,8),"_EFFadded.csv")
+Filenames = paste0("../../data/EFFadded_data/",substr(File_list,1,8),"_EFFadded.csv")
 write.csv(newdata,Filenames[1])
