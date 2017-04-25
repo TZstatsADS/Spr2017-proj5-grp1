@@ -215,7 +215,120 @@ write.csv(elo_2017, file = "../data/elo_2017.csv")
 fin <- elo_2017[nrow(elo_2017),]
 1/(10^(-(fin$`Toronto Raptors`-fin$`Milwaukee Bucks`)/400)+1)
 
-  
+# bind elo rating to original data
+
+elo_2016 <- read.csv("../data/elo_2016.csv")
+elo_2016$Date <- as.character(elo_2016$Date)
+colnames(elo_2016) <- c("X", "Date", sort(team_id))
+# aaa <- sapply(elo_2016$Date[-1], function(i) gsub(",", "", substring(i, 6)))
+# aaa <- as.Date(aaa, "%b%d%Y")
+# elo_2016$Date[-1] <- aaa
+# atl_elo <- unique(elo_2016$Atlanta.Hawks)
+# atl_2016 <- read.csv("../data/PerGame_2015/ATL_2015.csv")  
   
 
+
+changeDate <- function(i) {
+  clean <- gsub(",", "", substring(i, 6))
+  clean <-  as.Date(clean, "%b%d%Y")
+  return(clean)
+}
+aaa <- as.Date(sapply(elo_2016$Date[-1], changeDate), origin = "1970-01-01")
+elo_2016$Date[-1] <- as.character(aaa)
+
+#2015 regular###########################################################################
+add_elo <- function(name) {
+  df <- read.csv(paste0("../data/EFFadded/", name, "_2015_EFFadded.csv"))
+  df$Date <- as.character(as.Date(df$Date, "%m/%d/%y"))
+  ELO <- NA
+  ELO_opp <- NA
+  
+  for (i in 1:nrow(df)) {
+    ELO[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), 3]
+    ELO_opp[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), which(df$Opp[i]==colnames(elo_2016))]
+  }
+  
+  df$ELO <- ELO
+  df$ELO_opp <- ELO_opp
+  df <- df[, -c(1, 2)]
+  df <- df[c(1:24, 42, 25:41, 43)]
+  return(df)
+}
+
+name_vec <- c("BOS", "CHI", "WAS", "ATL", "TOR", "MIL",  "CLE", "IND", 
+              "GSW", "POR", "LAC", "UTA", "HOU", "OKC", "SAS", "MEM")
+
+for (i in 1:length(name_vec)) {
+  new_df <- add_elo(name_vec[i])
+  write.csv(new_df, file = paste0("../data/FinalData/", name_vec[i], "_2015.csv"))
+}
+
+#2015-2016 playoff###########################################################################
+add_elo <- function(name) {
+  df <- read.csv(paste0("../data/EFFadded/", name, "_2016_EFFadded_playoff.csv"))
+  df$Date <- as.character(df$Date)
+  ELO <- NA
+  ELO_opp <- NA
+  
+  for (i in 1:nrow(df)) {
+    ELO[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), 3]
+    ELO_opp[i] <- elo_2016[which(df$Date[i]==elo_2016$Date), which(df$Opp[i]==colnames(elo_2016))]
+  }
+  
+  df$ELO <- ELO
+  df$ELO_opp <- ELO_opp
+  df <- df[, -c(1, 2)]
+  df <- df[c(1:24, 42, 25:41, 43)]
+  return(df)
+}
+
+name_vec <- c("CLE", "TOR", "MIA", "ATL", "BOS", "CHO", "IND", "DET", 
+                  "GSW", "SAS", "OKC", "LAC", "POR", "DAL", "MEM", "HOU")
+
+for (i in 1:length(name_vec)) {
+  new_df <- add_elo(name_vec[i])
+  write.csv(new_df, file = paste0("../data/FinalData/", name_vec[i], "_2016_playoff.csv"))
+}
+
+
+#2016-2017 regular###########################################################################
+elo_2017 <- read.csv("../data/elo_2017.csv")
+elo_2017$Date <- as.character(elo_2017$Date)
+colnames(elo_2017) <- c("X", "Date", sort(team_id))
+
+
+changeDate <- function(i) {
+  clean <- gsub(",", "", substring(i, 6))
+  clean <-  as.Date(clean, "%b%d%Y")
+  return(clean)
+}
+aaa <- as.Date(sapply(elo_2017$Date[-1], changeDate), origin = "1970-01-01")
+elo_2017$Date[-1] <- as.character(aaa)
+
+
+add_elo <- function(name) {
+  df <- read.csv(paste0("../data/EFFadded/", name, "_2016_EFFadded.csv"))
+  df$Date <- as.character(as.Date(df$Date, "%m/%d/%y"))
+  ELO <- NA
+  ELO_opp <- NA
+  
+  for (i in 1:nrow(df)) {
+    ELO[i] <- elo_2017[which(df$Date[i]==elo_2017$Date), 3]
+    ELO_opp[i] <- elo_2017[which(df$Date[i]==elo_2017$Date), which(df$Opp[i]==colnames(elo_2017))]
+  }
+  
+  df$ELO <- ELO
+  df$ELO_opp <- ELO_opp
+  df <- df[, -c(1, 2)]
+  df <- df[c(1:24, 42, 25:41, 43)]
+  return(df)
+}
+
+name_vec <- c("BOS", "CHI", "WAS", "ATL", "TOR", "MIL",  "CLE", "IND", 
+              "GSW", "POR", "LAC", "UTA", "HOU", "OKC", "SAS", "MEM")
+
+for (i in 1:length(name_vec)) {
+  new_df <- add_elo(name_vec[i])
+  write.csv(new_df, file = paste0("../data/FinalData/", name_vec[i], "_2016.csv"))
+}
 
