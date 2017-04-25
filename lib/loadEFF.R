@@ -1,0 +1,15 @@
+loadEFF = function(){
+  EFF = read.csv("../data/EFF/NBA_EFF_20152016regular.csv")
+  EFFdic = data.frame(season = "2015/2016regular",Player = EFF$Player,EFF = EFF$eff)
+  EFF = read.csv("../data/EFF/NBA_EFF_20152016playoffs.csv")
+  tmp = data.frame(season = "2015/2016playoffs",Player = EFF$Player,EFF = EFF$eff)
+  EFFdic = rbind(EFFdic,tmp)
+  EFF = read.csv("../data/EFF/NBA_EFF_20162017regular.csv")
+  tmp = data.frame(season = "2016/2017regular",Player = EFF$Player,EFF = EFF$eff)
+  EFFdic = rbind(EFFdic,tmp)
+  EFF = read.csv("../data/EFF/NBA_EFF_20162017playoffs.csv")
+  tmp = data.frame(season = "2016/2017playoffs",Player = EFF$Player,EFF = EFF$eff)
+  EFFdic = rbind(EFFdic,tmp)
+  rm(EFF,tmp)
+  return(EFFdic)
+}
