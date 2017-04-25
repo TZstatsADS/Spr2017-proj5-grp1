@@ -39,7 +39,7 @@ fit_model<-fit_xgboost(train_data)
 ##get historical performace for Each Team
 #################################################
 ###Source function and functions:
-load("../output/training_output/xgboost_model.RData")
+#load("../output/training_output/xgboost_model.RData")
 lib.path<-"../lib/for_training_simulations/"
 
 
@@ -61,20 +61,14 @@ for (i in 1:m){
 
 
 ##Get the most updated data:
-ELO<-c()
-for(k in 1:16){
-  ELO[k]<-ave_data[[i]][nrow(ave_data[[i]]),18]
-}
-
-
 ##Pre-Processes the data:
 ave_data<-lapply(ave_data,clean_data)
 Ave_performace<-lapply(ave_data,get_average)
 Ave_performace<-Reduce(rbind,Ave_performace)
-dim(Ave_performace)
+#dim(Ave_performace)
 
 ##Save it for viluzalization:
-save(Ave_performace,file="../output/training_output/Ave_performace.RData")
+#save(Ave_performace,file="../output/training_output/Ave_performace.RData")
 
 ###Con't
 d<-ncol(Ave_performace)
@@ -146,3 +140,4 @@ pre1
 pre2
 pre3
 pre4
+#save(pre1,pre2,pre3,pre4,file="../output/training_output/simulation_results.RData")
