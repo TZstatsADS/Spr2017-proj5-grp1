@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  26 APR 2017 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  26 APR 2017 16:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,13 +528,7 @@ Type X to quit or <RETURN> to proceed,
 or enter new name. (Default extension: tex)
 
 Enter file name: 
-
-! LaTeX Error: File `XGboost.tex' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
-
-Enter file name: 
+(./XGboost.tex)
 
 ! LaTeX Error: File `Performance.tex' not found.
 
@@ -555,8 +549,8 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) [3] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5092 strings out of 493054
- 75327 string characters out of 6134760
+ 5094 strings out of 493054
+ 75351 string characters out of 6134760
  146236 words of memory out of 5000000
  8548 multiletter control sequences out of 15000+600000
  7580 words of font info for 27 fonts, out of 8000000 for 9000
@@ -567,7 +561,7 @@ onts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr17.pfb>
-Output written on main.pdf (3 pages, 149516 bytes).
+Output written on main.pdf (3 pages, 153140 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
