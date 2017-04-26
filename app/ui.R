@@ -19,7 +19,11 @@ library(shinydashboard)
 library(shinythemes)
 library(XML)
 
-
+featureList<-c("FG","FGA","FG.","X3P","X3PA",
+                "X3P.","FT","FTA","FT.","ORB",
+                "TRB","AST","STL","BLK","TOV",
+                "PF","EFF","ELO")
+playoff16<-c("BOS","CHI","WAS","ATL","TOR","MIL","CLE","IND","GSW","POR","LAC","UTA","HOU","OKC","SAS","MEM")
 
 shinyUI(navbarPage(theme = "bootstrap.min-copy.css","Who is the champion",id="nav",
                    
@@ -54,15 +58,34 @@ shinyUI(navbarPage(theme = "bootstrap.min-copy.css","Who is the champion",id="na
                                       tabsetPanel(type="tabs",
                                                   tabPanel(title="Feature Selection",
                                                            br(),
-                                                           div(plotOutput("plot_1"), align="center")
-                                                  ),
-                                                  tabPanel(title="Team Comparation",
-                                                           br(),
-                                                           div(plotOutput("plot_2"), align="center")
+                                                           fixedRow(
+                                                             column(3, selectInput(inputId = "Feature_1", label = "Select first feature",
+                                                                                   choices = featureList, selected = "TRB")),
+                                                             column(4, selectInput(inputId = "Feature_2", label = "Select second feature",
+                                                                                   choices = featureList))),
+                                                           
+                                                             column(6, highchartOutput("plot_1",height=600, width =800)),
+                                                              img(src='img/table_1.png', align = "right",height=600, width =400,style = "opacity: 0.72")
+                                                           
                                                   ),
                                                   tabPanel(title="Team Performance",
                                                            br(),
-                                                           div(plotOutput("plot_3"), align="center")
+                                                           fixedRow(
+                                                             column(3, selectInput(inputId = "Team", label = "Select a team",
+                                                                                   choices = playoff16, selected = "GSW")),
+                                                             
+                                                                  chartOutput("plot_2","Nvd3")
+                                                             
+                                                  )),
+                                                  tabPanel(title="Team Comparation",
+                                                           br(),
+                                                           fixedRow(
+                                                             column(3, selectInput(inputId = "team_1", label = "Select first team",
+                                                                                   choices = playoff16, selected = "GSW")),
+                                                             column(4, selectInput(inputId = "team_2", label = "Select second team",
+                                                                                   choices = playoff16))),
+                                                           br(),
+                                                           column(6, chartJSRadarOutput("plot_3",height=600, width =800))
                                                   )
                                                   
                                       )
