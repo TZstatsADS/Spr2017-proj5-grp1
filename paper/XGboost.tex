@@ -2,11 +2,15 @@
 
 We take the following steps to train and fit XGBoost model to our data: 
 \begin{enumerate}
-	\item Read in 2015 Regular Season data as training data and 2016 Regular Season data as test data
-	\item Cumulatively add all the data available before the date of each test data point as test features
+	\item Read in 2015 Regular Season data and 2016 Regular Season data from 
+	    www.basketball-reference.com/ as training and test data respectively
+	\item Cumulatively add all the data available before the date of each test
+	    data point to the test data, and use dynamic moving average of the 
+	    history data as test features
 	\item Transform the data to the desired form for xgboost model
-	\item Select the best parameters (depth, eta) of the XGBoost model through cross validaation
-	\item Train the XGBoost model using the best parameters to the entire dataset and obtain predictions for this season
+	\item Select the best parameters (depth, eta) of the XGBoost model through
+	    cross validation
+	\item Train the XGBoost model using the best parameters to the entire
+	    dataset and obtain predictions for this season
 \end{enumerate}
-
 
