@@ -210,10 +210,6 @@ elo_2017 <- allgames
 write.csv(elo_2016, file = "../data/elo_2016.csv")
 write.csv(elo_2017, file = "../data/elo_2017.csv")
 
-#Pr(A) = 1 / (10^(-ELODIFF/400) + 1)
-# Based on most rescent elo points, prob that MIL wins over TOR is:
-fin <- elo_2017[nrow(elo_2017),]
-1/(10^(-(fin$`Toronto Raptors`-fin$`Milwaukee Bucks`)/400)+1)
 
 # bind elo rating to original data
 
@@ -332,3 +328,46 @@ for (i in 1:length(name_vec)) {
   write.csv(new_df, file = paste0("../data/FinalData/", name_vec[i], "_2016.csv"))
 }
 
+
+#Pr(A) = 1 / (10^(-ELODIFF/400) + 1)
+# Based on most rescent elo points, prob that MIL wins over TOR is:
+fin <- elo_2017[nrow(elo_2017),]
+# Prob that GSW won over POR is:
+1/(10^(-(fin$GSW-fin$POR)/400)+1)
+# Prob that LAC won over UTA is:
+1/(10^(-(fin$LAC-fin$UTA)/400)+1)
+# Prob that OCK won over HOU is:
+1/(10^(-(fin$OKC-fin$HOU)/400)+1)
+# Prob that SAS won over MEM is:
+1/(10^(-(fin$SAS-fin$MEM)/400)+1)
+
+
+# Prob that CLE won over IND 
+1/(10^(-(fin$CLE-fin$IND)/400)+1)
+# Prob that ATL won over WAS 
+1/(10^(-(fin$ATL-fin$WAS)/400)+1)
+# Prob that TOR won over MIL 
+1/(10^(-(fin$TOR-fin$MIL)/400)+1)
+# Prob that BOS won over CHI 
+1/(10^(-(fin$BOS-fin$CHI)/400)+1)
+
+first_round <- matrix(NA, nrow = 1)
+
+#
+
+1/(10^(-(fin$GSW-fin$LAC)/400)+1)
+
+1/(10^(-(fin$SAS-fin$OKC)/400)+1)
+
+1/(10^(-(fin$GSW-fin$SAS)/400)+1)
+
+
+#
+1/(10^(-(fin$ATL-fin$BOS)/400)+1)
+
+1/(10^(-(fin$CLE-fin$TOR)/400)+1)
+
+1/(10^(-(fin$CLE-fin$ATL)/400)+1)
+
+#
+1/(10^(-(fin$GSW-fin$CLE)/400)+1)
