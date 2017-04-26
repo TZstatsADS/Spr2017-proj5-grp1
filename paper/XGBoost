@@ -1,0 +1,9 @@
+XGBoost
+
+We take the following steps to train and fit XGBoost model to our data: 
+\begin{enumerate}
+	\item Read in 2015 Regular Season data as training data and 2016 Regular Season data as test data
+	\item Transform the data to the desired form for xgboost model
+	\item Select the best parameters (depth, eta) using cross validaation
+	\item Train the XGBoost model using the best parameters to the entire dataset and obtain predictions for this season
+\end{enumerate}
