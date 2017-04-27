@@ -1,0 +1,29 @@
+\section{Model Selection}
+
+At the very beginning, we tried various models and picked the model with 
+the highest prediction accuracy, which is XGBoost. The steps to train and test
+each model are as following:
+\begin{enumerate}
+    \item We picked the 2015 Regular Season data and 2016 Regular Season data
+    from www.basketball-reference.com/ as training and testing data respectively.
+
+    \item We trained the model based on the 2015 Regular Season data, with 
+	    parameters selected from 10-fold cross-validation. For training the
+	    model, we treated each game as one observation. And for each game,
+	    we used the performance of both teams, say Team A and Team B, and
+	    other game related data (such as the players’ information and whether
+	    the game is played at Team A’s home field) as features.
+	\item Based on our model, we predicted the outcome of each game on 
+	    2016 Regular Season. For each team, we found all the historical games 
+	    it played and used dynamic moving average of the history data as the measure
+	    of performance of one team. For predicting the results for each game,
+	    knowing which two teams will play, we combined the historical performance 
+	    of the two teams and added other information as test features. Once a
+	    game finished, we updated the historical performance of both
+	    participated teams, and continued the process until the last game.
+	\item Following the above procedure, we finally found that the XGBoost had 
+	    the best prediction accuracy, which was 70.2\%.
+\end{enumerate}
+
+
+

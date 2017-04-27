@@ -2,19 +2,18 @@
 
 We take the following steps to train and fit XGBoost model to our data: 
 \begin{enumerate}
-	\item Read in 2015 Regular Season data and 2016 Regular Season data from 
-	    www.basketball-reference.com/ as training and test data respectively
-	\item Cumulatively add all the data available before the date of each test
-	    data point to the test data, and use dynamic moving average of the 
-	    history data as test features
-	\item Transform the data to the desired form for xgboost model
-	\item Select the best parameters (depth, eta) of the XGBoost model through
-	    cross validation
-	\item Train the XGBoost model using the best parameters to the entire
-	    dataset and obtain predictions for this season
+	\item For predicting the champion for the 2017 playoff, we retrained the
+	    XGBoost Model, on the 2015 Regular Season, 2016 Playoff, and 2016
+	    Regular Season data, with the best parameters (depth, eta) selected 
+	    from cross-validation. 
+	\item After training the model, we could predict the wining probability
+	    for Team A in each game as long as we have the information for that game.
+	\item Since we don't know the game performance data before the game, here
+	    we take nearest 82 games, deploy dymaic moving average of the 82 historical
+        data as test features, plus what we know before each game, like EFF (since
+        we know the starters and reserves before game starts), home or away, and
+        ELO rating.
 \end{enumerate}
 
 
-In more details, for 2016-2017 season playoffs predictions, we train the XGBoost
-model using xxx datasets, and use weighted average of most recent 82 games as 
-input of the model (except for features home-away, EFF and ELO).
+
