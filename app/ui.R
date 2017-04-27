@@ -72,11 +72,13 @@ shinyUI(navbarPage(theme = "bootstrap.min-copy.css","Who is the champion",id="na
                                                            br(),
                                                            fixedRow(
                                                              column(3, selectInput(inputId = "Team", label = "Select a team",
-                                                                                   choices = playoff16, selected = "GSW")),
+                                                                                   choices = playoff16, selected = "GSW"))),
                                                              
-                                                                  chartOutput("plot_2","Nvd3")
+                                                             mainPanel(
+                                                               div(class='wrapper',showOutput("plot_2", "nvd3"))
+                                                             )
                                                              
-                                                  )),
+                                                  ),
                                                   tabPanel(title="Team Comparation",
                                                            br(),
                                                            fixedRow(

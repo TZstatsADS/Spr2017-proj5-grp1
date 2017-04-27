@@ -74,24 +74,9 @@ labs<-c("FG%","X3P%","TRB","AST","STL","BLK")
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
   
-  output$plot_3 <- renderChartJSRadar({
-    a<-which(input$team_1==playoff16)
-    b<-which(input$team_2==playoff16)
-    scores<-list(
-      "team1"=as.numeric(radardata[a,1:6]),
-      "team2"=as.numeric(radardata[b,1:6]))
-    
-    chartJSRadar(scores = scores, labs = labs, 
-                 scaleStartValue=min(radardata[a,],radardata[b,])+0.01,
-                 maxScale = max(radardata[a,],radardata[b,])+0.01)
-    
-  })
-
   output$plot_1 <- renderHighchart({
     graph_choice1(input$Feature_1, input$Feature_2)
   })
-
-  
   
   output$plot_2 <- renderChart2({
     team<-paste0(input$Team,"_2015.csv")
@@ -104,7 +89,23 @@ shinyServer(function(input, output) {
     #####Choose Variables Time of a Game and Opp.1
     colnames(data)<-c("No","Tm","Opp.1")
     df.melt.id <- as.data.frame.array(melt(data, id="No"))
-    nPlot(value ~ No, group = 'variable', data = df.melt.id, type = 'lineWithFocusChart')
+    p<-nPlot(value ~ No, group = 'variable', data = df.melt.id, type = 'lineWithFocusChart')
+    p$chart(color = c('red', 'blue'))
+    p
+  })
+  
+  output$plot_3 <- renderChartJSRadar({
+    a<-which(input$team_1==playoff16)
+    b<-which(input$team_2==playoff16)
+    scores<-list(
+      "team1"=as.numeric(radardata[a,1:6]),
+      "team2"=as.numeric(radardata[b,1:6]))
+    
+    chartJSRadar(scores = scores, labs = labs, 
+                 scaleStartValue=min(radardata[a,],radardata[b,])+0.01,
+                 maxScale = max(radardata[a,],radardata[b,])+0.01,
+                 showToolTipLabel=TRUE,main = "Compare two teams average ability")
     
   })
+
 })
