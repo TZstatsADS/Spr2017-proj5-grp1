@@ -1,4 +1,4 @@
-# ADS Project 5: 
+# ADS Project 5: :basketball: :basketball: :basketball: :basketball: :basketball:
 
 Term: Spring 2017
 
@@ -29,5 +29,7 @@ Term: Spring 2017
 + ShinyApp:
 
 URL: [Who wins the champion](https://amandazhang.shinyapps.io/testnba/)
+
+:tada:Take a look at our prediction:
 
 ![demo](./figs/lol.gif)
