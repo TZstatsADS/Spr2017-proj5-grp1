@@ -1,11 +1,12 @@
-# ADS Project 5: :basketball: :basketball: :basketball: Who will win the 2017 Finals Champion :basketball: :basketball: :basketball:
+# ADS Project 5:
+# :basketball: :basketball: :basketball: Who will win the 2017 Finals Champion :basketball: :basketball: :basketball:
 
 Term: Spring 2017
 
 + Team 1 :bulb: The A Team
 + Projec title: :trophy: Who will win the 2017 Finals Championship :trophy:
 + Team members
-	+ :octocat: Qingyuan Zhang
+	+ :octocat: Qingyuan Zhang (presenter)
 	+ :girl: Jihan Wei
 	+ :cherry_blossom: Ruxue Peng
 	+ :princess: Zixuan Guan
@@ -24,11 +25,12 @@ Term: Spring 2017
  like till the last minutes.
 
  Then why this project? Because we want to train our machine on helping us
- make predictions without subjective opinions. 
+ make predictions without subjective opinions. And turns out we did a great
+ job on prediction!
 
-+ ShinyApp:
++ We published a ShinyApp to give a more interactive way for data visualization:
 
-URL: [Who wins the champion](https://amandazhang.shinyapps.io/testnba/)
+Check this URL: :point_right:[Who wins the champion](https://amandazhang.shinyapps.io/testnba/)
 
 # :tada:                   Take a look at our prediction:
 
