@@ -1,15 +1,15 @@
-# ADS Project 5: :basketball: :basketball: :basketball: :basketball: :basketball:
+# ADS Project 5: :basketball: :basketball: :basketball: :basketball: :basketball: Who will win the 2017 Finals Champion :basketball: :basketball: :basketball: :basketball: :basketball:
 
 Term: Spring 2017
 
-+ Team 1
-+ Projec title: The Champion goes to...
++ Team 1 :bulb: The A Team
++ Projec title: :trophy: Who will win the 2017 Finals Championship :trophy:
 + Team members
-	+ Qingyuan Zhang
-	+ Jihan Wei
-	+ Ruxue Peng
-	+ Zixuan Guan
-	+ Yue Jin
+	+ :octocat: Qingyuan Zhang
+	+ :girl: Jihan Wei
+	+ :cherry_blossom: Ruxue Peng
+	+ :princess: Zixuan Guan
+	+ :sunflower: Yue Jin
 + Project summary:
 
 ![playoffs](./paper/images/playoff.jpg)
