@@ -18,7 +18,10 @@ library(shiny)
 library(shinydashboard)
 library(shinythemes)
 library(XML)
-
+library("highcharter")
+library(rCharts)
+library(radarchart)
+library(devtools)
 featureList<-c("FG","FGA","FG.","X3P","X3PA",
                 "X3P.","FT","FTA","FT.","ORB",
                 "TRB","AST","STL","BLK","TOV",

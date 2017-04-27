@@ -11,7 +11,7 @@ library(reshape2)
 #graph funtion 1
 ####################################################
 ###This is the function for generating graph 1:
-load("./output/training_output/Ave_performace.RData")
+load("../output/training_output/Ave_performace.RData")
 rown<-rownames(Ave_performace)
 Ave_performace<-round(Ave_performace,3)
 rownames(Ave_performace)<-c("ATL","BOS","CHI","CLE","GSW","HOU","IND","LAC","MEM","MIL","OKC","POR","SAS",
