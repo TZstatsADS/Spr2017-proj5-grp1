@@ -30,3 +30,4 @@ Term: Spring 2017
 
 URL: [Who wins the champion](https://amandazhang.shinyapps.io/testnba/)
 
+![demo](./figs/lol.gif)
