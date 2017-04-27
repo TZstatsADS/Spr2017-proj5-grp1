@@ -1,7 +1,7 @@
 ## Packages
 
 packages.used <- 
-  c("shiny","shinydashboard","shinythemes","XML", "highcharter", "rCharts", "devtools")
+  c("shiny","shinydashboard","shinythemes","XML", "highcharter", "rCharts", "devtools","shinyLP")
 
 # check packages that need to be installed.
 packages.needed=setdiff(packages.used, 
@@ -50,12 +50,12 @@ shinyUI(navbarPage(theme = "bootstrap.min-copy.css","Who is the champion",id="na
       
                    ),
                    
-                   tabPanel("Prediction",div(id="canvas"),
-                            mainPanel(img(src='img/playoff.jpg', align = "center",width="1380", style = "opacity: 0.72")),
-                            actionButton("action", label = "Analyse")
-                            
-                            ),
                    
+                   tabPanel("Prediction",div(id="canvas",style="text-align:center"),
+                      mainPanel(
+                        h2("Prediction Video",br(),tags$video(src = "img/lol.mp4", type = "video/mp4", autoplay = NA, controls = NA,width = "100%"),align="center")
+                      )
+                   ),
                   
                    tabPanel("Statistics",div(id="canvas"),
                             h2("Summary Statistics"),
