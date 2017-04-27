@@ -1,5 +1,5 @@
 # ADS Project 5:
-# :basketball: :basketball: :basketball: Who will win the 2017 Finals :trophy: Champion :basketball: :basketball: :basketball:
+# :basketball: :basketball: :basketball: Who will be the 2017 Finals :trophy: Champion :basketball: :basketball: :basketball:
 
 Term: Spring 2017
 
