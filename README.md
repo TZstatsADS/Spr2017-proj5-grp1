@@ -25,5 +25,8 @@ Term: Spring 2017
 
  Then why this project? Because we want to train our machine on helping us
  make predictions without subjective opinions. 
-	
+
++ ShinyApp:
+
+URL: [Who wins the champion](https://amandazhang.shinyapps.io/testnba/)
 

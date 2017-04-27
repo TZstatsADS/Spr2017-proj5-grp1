@@ -1,7 +1,7 @@
 ## Packages
 
 packages.used <- 
-  c("shiny","shinydashboard","shinythemes","XML")
+  c("shiny","shinydashboard","shinythemes","XML", "highcharter", "rCharts", "devtools")
 
 # check packages that need to be installed.
 packages.needed=setdiff(packages.used, 
