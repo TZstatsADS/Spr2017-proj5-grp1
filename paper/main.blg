@@ -2,13 +2,8 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: siam.bst
-I couldn't open database file main.bib
----line 10 of file main.aux
- : \bibdata{main
- :              }
-I'm skipping whatever remains of this command
 I found no \citation commands---while reading file main.aux
-I found no database files---while reading file main.aux
+I found no \bibdata command---while reading file main.aux
 You've used 0 entries,
             2030 wiz_defined-function locations,
             496 strings with 3710 characters,
@@ -50,4 +45,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 2
-(There were 3 error messages)
+(There were 2 error messages)

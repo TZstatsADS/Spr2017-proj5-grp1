@@ -1,4 +1,4 @@
-\section{XGboost}
+\section{XGBoost}
 
 We take the following steps to train and fit XGBoost model to our data: 
 \begin{enumerate}
@@ -14,3 +14,7 @@ We take the following steps to train and fit XGBoost model to our data:
 	    dataset and obtain predictions for this season
 \end{enumerate}
 
+
+In more details, for 2016-2017 season playoffs predictions, we train the XGBoost
+model using xxx datasets, and use weighted average of most recent 82 games as 
+input of the model (except for features home-away, EFF and ELO).

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  26 APR 2017 16:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  27 APR 2017 02:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,54 +517,79 @@ Overfull \hbox (18.56808pt too wide) in paragraph at lines 6--7
  [][] 
  []
 
-) (./data.tex [1
+) (./data.tex <./images/Features.png, id=2, 869.2475pt x 230.8625pt>
+File: ./images/Features.png Graphic file (type png)
+
+<use ./images/Features.png>
+Package pdftex.def Info: ./images/Features.png used on input line 10.
+(pdftex.def)             Requested size: 505.89pt x 134.3618pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./image
-s/playoff.jpg>])
+s/playoff.jpg>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 17.
+) (./ELO.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
 
-! LaTeX Error: File `ELO.tex' not found.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
+ [2 <./images/Features.png>]) (./XGboost.tex) (./Simulation.tex
+<./images/Format.jpg, id=24, 462.528pt x 260.172pt>
+File: ./images/Format.jpg Graphic file (type jpg)
+ <use ./images/Format.jpg>
+Package pdftex.def Info: ./images/Format.jpg used on input line 5.
+(pdftex.def)             Requested size: 505.89pt x 284.57828pt.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
 
-Enter file name: 
-(./XGboost.tex)
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-! LaTeX Error: File `Performance.tex' not found.
+[3]) (./Prediction.tex [4 <./images/Format.jpg>]
+<./images/west.jpg, id=31, 1003.75pt x 602.25pt>
+File: ./images/west.jpg Graphic file (type jpg)
+ <use ./images/west.jpg>
+Package pdftex.def Info: ./images/west.jpg used on input line 8.
+(pdftex.def)             Requested size: 505.89pt x 303.5411pt.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
+[5 <./images/west.jpg>] [6]
+<./images/james.jpg, id=38, 1712.3975pt x 1141.26375pt>
+File: ./images/james.jpg Graphic file (type jpg)
 
-Enter file name: 
-
-! LaTeX Error: File `ShinyApp.tex' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
-
-Enter file name: 
-[2] (./main.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-) [3] (./main.aux) ) 
+<use ./images/james.jpg>
+Package pdftex.def Info: ./images/james.jpg used on input line 19.
+(pdftex.def)             Requested size: 505.89pt x 337.15749pt.
+ [7 <./images/james.jpg>] [8]) [9] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5094 strings out of 493054
- 75351 string characters out of 6134760
- 146236 words of memory out of 5000000
- 8548 multiletter control sequences out of 15000+600000
- 7580 words of font info for 27 fonts, out of 8000000 for 9000
+ 5140 strings out of 493054
+ 76222 string characters out of 6134760
+ 148236 words of memory out of 5000000
+ 8583 multiletter control sequences out of 15000+600000
+ 8542 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,40p,270b,242s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr17.pfb>
-Output written on main.pdf (3 pages, 153353 bytes).
+ 42i,6n,40p,270b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (9 pages, 1191010 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
