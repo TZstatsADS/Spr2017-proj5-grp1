@@ -39,6 +39,7 @@ shinyUI(navbarPage(theme = "bootstrap.min-copy.css","Who is the champion",id="na
                               img(src='img/right.jpg', align = "right"),
                               h1("Who is the Champion ?",style = "font-family: 'Ranga';
                                   color: #800020; text-align: center;padding: 20px"),
+                              
                               h1("Team Members:", align = "center"),
                               h2("Qingyuan Zhang", align = "center"),
                               h2("Jihan Wei", align = "center"),
@@ -50,7 +51,9 @@ shinyUI(navbarPage(theme = "bootstrap.min-copy.css","Who is the champion",id="na
                    ),
                    
                    tabPanel("Prediction",div(id="canvas"),
-                            mainPanel(img(src='img/playoff.jpg', align = "center",width="1380", style = "opacity: 0.72"))
+                            mainPanel(img(src='img/playoff.jpg', align = "center",width="1380", style = "opacity: 0.72")),
+                            actionButton("action", label = "Analyse")
+                            
                             ),
                    
                   
