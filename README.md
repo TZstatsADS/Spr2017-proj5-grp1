@@ -1,4 +1,4 @@
-# ADS Project 5: :basketball: :basketball: :basketball: :basketball: :basketball: Who will win the 2017 Finals Champion :basketball: :basketball: :basketball: :basketball: :basketball:
+# ADS Project 5: :basketball: :basketball: :basketball: Who will win the 2017 Finals Champion :basketball: :basketball: :basketball:
 
 Term: Spring 2017
 
@@ -30,6 +30,6 @@ Term: Spring 2017
 
 URL: [Who wins the champion](https://amandazhang.shinyapps.io/testnba/)
 
-:tada:Take a look at our prediction:
+# :tada:                   Take a look at our prediction:
 
 ![demo](./figs/lol.gif)
