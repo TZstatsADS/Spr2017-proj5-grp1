@@ -41,6 +41,7 @@ fit_model<-fit_xgboost(train_data)
 #################################################
 ###Source function and functions:
 #load("../output/training_output/xgboost_model.RData")
+#load("../output/training_output/train_data.RData")
 lib.path<-"../lib/for_training_simulations/"
 
 
@@ -78,6 +79,7 @@ d<-ncol(Ave_performace)
 ave<-substr(ave, start=1, stop=3)
 rownames(Ave_performace)<-ave
 dim(Ave_performace)
+Ave_performace[8,]<-Ave_performace[8,]*0.9
 
 ####################################################
 #Construct the test matrix
@@ -113,7 +115,6 @@ prediction2 <- predict(fit_model,Test.x2)  ##predicted wining rate for home=0
 
 ##Get Probability Matrix:
 WininngProb<-cbind(name,prediction1,prediction1,prediction2,prediction2,prediction1,prediction2,prediction1)
-
 ##Save outputs:
 #save(WininngProb,file="../output/training_output/WininngProb.RData")
 
@@ -123,18 +124,19 @@ WininngProb<-cbind(name,prediction1,prediction1,prediction2,prediction2,predicti
 #source("../lib/for_training_simulations/simulation_function.R")
 
 ###The for the 4-layers simulations:
-teams<-c("GSW","POR","LAC","UTA","HOU","OKC","SAS","MEM",
+teams<-c("GSW","POR","UTA","LAC","HOU","OKC","SAS","MEM",
          "BOS","CHI","WAS","ATL","TOR","MIL","CLE","IND")
 WininngProb1<-WininngProb
 WininngProb2<-WininngProb
 WininngProb3<-WininngProb
 WininngProb4<-WininngProb
-pre1<-simulation_layer(teams,WininngProb=WininngProb1,iter=5000)
-pre2<-simulation_layer(pre1,WininngProb=WininngProb2,iter=5000)
-pre3<-simulation_layer(pre2,WininngProb=WininngProb3,iter=5000)
+
+pre1<-simulation_layer(teams,WininngProb=WininngProb1,iter=1000)
+pre2<-simulation_layer(pre1,WininngProb=WininngProb2,iter=1000)
+pre3<-simulation_layer(pre2,WininngProb=WininngProb3,iter=1000)
 
 #for the final round:
-pre4<- simulation_layer(pre3,WininngProb=WininngProb3,iter=5000)
+pre4<- simulation_layer(pre3,WininngProb=WininngProb3,iter=1000)
 pre1
 pre2
 pre3
