@@ -26,7 +26,6 @@ Term: Spring 2017
 
 + We published a ShinyApp to give a more interactive way for data visualization:
 
-Check this URL: :point_right:[Who wins the champion](https://amandazhang.shinyapps.io/testnba/)
 
 # :tada:                   Take a look at our prediction:
 
