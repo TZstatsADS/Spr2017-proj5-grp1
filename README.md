@@ -20,8 +20,7 @@ Term: Spring 2017
  history. For the playoffs, OKC ended their journey even though they got 3-0 over GSW
  at first. Following that, the same situation happened to GSW: at the finals, GSW beat CLE by 3-0, but they dramatically lost the following 4 games. 
 
- This is why NBA is so enchanting. You can never predict what the game would be
- like till the last minutes.
+ This is why NBA is so enchanting.
 
  Then why this project? We were eager to see how computer, a machine without subjective opinions about NBA and the teams, predicts the result of the game, using purely on data given.  It turns out to be surprisingly good!
 
