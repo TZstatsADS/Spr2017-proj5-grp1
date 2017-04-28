@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  27 APR 2017 21:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.4)  28 APR 2017 12:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -534,30 +534,36 @@ s/playoff.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 17.
 ) (./ELO.tex
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
+<./images/facebook.jpg, id=13, 1508.63625pt x 1003.75pt>
+File: ./images/facebook.jpg Graphic file (type jpg)
+
+<use ./images/facebook.jpg>
+Package pdftex.def Info: ./images/facebook.jpg used on input line 9.
+(pdftex.def)             Requested size: 754.31628pt x 501.87378pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 13.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
- [2 <./images/Features.png>]) (./modelselection.tex) (./XGboost.tex [3]) (./Sim
-ulation.tex
-<./images/Format.jpg, id=27, 462.528pt x 260.172pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 13.
+ [2 <./images/Features.png> <./images/facebook.jpg>]) (./modelselection.tex [3]
+) (./XGboost.tex)
+(./Simulation.tex <./images/Format.jpg, id=28, 462.528pt x 260.172pt>
 File: ./images/Format.jpg Graphic file (type jpg)
- <use ./images/Format.jpg>
-Package pdftex.def Info: ./images/Format.jpg used on input line 5.
-(pdftex.def)             Requested size: 505.89pt x 284.57828pt.
 
-[4 <./images/Format.jpg>]) (./Prediction.tex [5]
-<./images/west.jpg, id=34, 1003.75pt x 602.25pt>
+<use ./images/Format.jpg>
+Package pdftex.def Info: ./images/Format.jpg used on input line 5.
+(pdftex.def)             Requested size: 231.26343pt x 130.08566pt.
+ [4 <./images/Format.jpg>]) (./Prediction.tex [5]
+<./images/west.jpg, id=35, 1003.75pt x 602.25pt>
 File: ./images/west.jpg Graphic file (type jpg)
  <use ./images/west.jpg>
 Package pdftex.def Info: ./images/west.jpg used on input line 8.
 (pdftex.def)             Requested size: 505.89pt x 303.5411pt.
 
 [6 <./images/west.jpg>] [7]
-<./images/james.jpg, id=42, 1712.3975pt x 1141.26375pt>
+<./images/james.jpg, id=43, 1712.3975pt x 1141.26375pt>
 File: ./images/james.jpg Graphic file (type jpg)
 
 <use ./images/james.jpg>
@@ -566,13 +572,13 @@ Package pdftex.def Info: ./images/james.jpg used on input line 19.
  [8 <./images/james.jpg>] [9]) (./vis.tex) [10]
 (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5146 strings out of 493054
- 76293 string characters out of 6134760
+ 5151 strings out of 493054
+ 76408 string characters out of 6134760
  148236 words of memory out of 5000000
- 8583 multiletter control sequences out of 15000+600000
+ 8587 multiletter control sequences out of 15000+600000
  8542 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,40p,270b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,6n,40p,270b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -584,10 +590,10 @@ b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (10 pages, 1196793 bytes).
+Output written on main.pdf (10 pages, 1380865 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
