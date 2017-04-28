@@ -28,7 +28,7 @@ graph_choice1<-function(xname="TRB",yname="FG"){
     hc_xAxis(title=list(text = xname))%>% 
     hc_yAxis(title=list(text = yname))%>% 
     hc_add_series_scatter(Ave_performace[,ind1],Ave_performace[,ind2],
-                          Ave_performace$y,Ave_performace$y,rownames(Ave_performace),
+                          Ave_performace$EFF,Ave_performace$EFF,rownames(Ave_performace),
                           dataLabels = list(
                             enabled = TRUE,
                             format = "{point.label}"
